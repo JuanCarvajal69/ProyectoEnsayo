@@ -1,0 +1,376 @@
+html {
+    background-color: rgb(228, 224, 224);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+.border {
+
+    border-radius: 15px;
+
+}
+
+div {
+    margin-top: 5%;
+    margin-left: 5%;
+    border: solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    color: #909090;
+    width: 100%;
+    
+
+}
+
+header {
+    grid-area: cabeza;
+    background-color: rgb(189, 188, 188)
+}
+
+footer {
+    grid-area: pie;
+}
+
+section {
+    grid-area: productos;
+}
+
+nav {
+    grid-area: menu;
+}
+
+/*Smartphone*/
+.flexMenu {
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+span {
+    background-color: white;
+    margin-bottom: 5pxpx;
+    padding: 1 0px;
+}
+
+span:hover {
+    background-color: #34495e;
+    color: azure;
+}
+
+/*grid por areas*/
+#gridAreas {
+    display: grid;
+    /*Estructura    */
+    grid-template-areas:
+        "cabeza"
+        /*fila 1*/
+        "menu"
+        "productos"
+        /*fila 2*/
+        "pie"
+        /*fila 4*/
+    ;
+    grid-template-columns: 96%;
+    grid-template-rows: 5% 15% 128% 75px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+div{
+    margin-left: 0%;
+    margin-right: 0%;
+}
+h1 {
+    font-size: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+a:hover {
+    color: #0b2df1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+span {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+p {
+    color: black;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+article {
+
+    text-align: center;
+    margin: 0%;
+}
+
+footer {
+    font-family: 'Moon Dance', cursive, bold;
+    font-size: 18px;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    background-color: rgb(189, 188, 188);
+    color: blue;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/*Tablet*/
+@media(min-width:480px) and (max-width:1023px) {
+
+    /*grid por areas*/
+    #gridAreas {
+        display: grid;
+        /*Estructura    */
+        grid-template-areas:
+            "cabeza cabeza "
+            /*fila 1*/
+            "menu productos "
+            /*fila 2*/
+            "menu productos "
+            /*fila 3*/
+            "pie pie"
+            /*fila 4*/
+        ;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 9% 50% 75% 6%;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    span {
+        background-color: white;
+        margin-bottom: 10px;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+    }
+
+    a {
+
+        color: black;
+        text-decoration: none;
+    }
+
+    footer {
+        font-family: 'Moon Dance', cursive, bold;
+        font-size: 18px;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        text-align: right;
+        background-color: rgb(189, 188, 188);
+        color: black;
+        border-radius: 10px;
+    }
+
+    /*Flex*/
+    .flexMenu {
+        font-family: 'Work Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
+        padding-top: 25vh;
+        text-align: center;
+        font-size: 110%;
+    }
+
+    .productosFlex {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    article {
+        border-radius: 4px;
+        margin: 0%;
+        text-align: center;
+        padding: 1px;
+    }
+
+    p {
+        color: black;
+        width: 100%;
+        text-align: center;
+
+
+    }
+    div{
+        width: 90%;
+    }
+    
+
+    .flex1 {
+        display: flex;
+        /*flex-direction: row;
+        flex-wrap: wrap;*/
+        flex-flow: column;
+        width: 100%;
+        height:64vh;
+    }
+    
+
+
+}
+
+
+/*Desktop*/
+@media(min-width:1024px) {
+    /*Estilos generales*/
+
+    a {
+
+        color: black;
+        text-decoration: none;
+        font-size: 120%;
+    }
+
+    a:hover {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    span {
+        background-color: white;
+        margin-bottom: 10px;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    span:hover {
+        background-color: #34495e;
+    }
+
+    /*grid por areas*/
+    #gridAreas {
+        display: grid;
+        /*Estructura    */
+        grid-template-areas:
+            "cabeza cabeza cabeza"
+            /*fila 1*/
+            "menu productos productos"
+            /*fila 2*/
+            "menu productos productos"
+            /*fila 3*/
+            "pie pie pie"
+            /*fila 4*/
+        ;
+        grid-template-columns: 20% 27.5% 50%;
+        grid-template-rows: 8% 40% 42.5% 5%;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    footer {
+        font-family: 'Moon Dance', cursive, bold;
+        font-size: 22px;
+        padding-right: 10px;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        text-align: right;
+        background-color: rgb(189, 188, 188);
+        color: black;
+        border-radius: 10px;
+    }
+
+
+
+    p {
+        color: black;
+        width: 98%;
+        text-align: center;
+        padding: 1%;
+        
+    }
+    section{
+justify-content: center;
+align-items: center;
+width: 100%;
+    }
+    /*Flex*/
+    .flexMenu {
+        font-family: 'Work Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
+        padding-top: 25vh;
+        text-align: center;
+        font-size: 110%;
+    }
+div{
+    margin-left: 1%;
+}
+
+/*Implementando flex para acomodar el contenido con el fin
+esperado*/
+    .flex1 {
+        display: flex;
+        /*flex-direction: row;
+        flex-wrap: wrap;*/
+        flex-flow: nowrap;
+        width: 100%;
+        height: 80vh;
+
+
+    }
+
+    article {
+        margin-left: 1%;
+        margin-top: 26%;
+        margin-bottom: 20%;
+
+    }
+
+
+    .flex2 {
+        display: flex;
+        /*flex-direction: row;
+        flex-wrap: wrap;*/
+        flex-flow: column;
+
+        width: 100%;
+        height: 64vh;
+
+    }
+
+}
